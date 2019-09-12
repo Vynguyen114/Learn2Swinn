@@ -12,8 +12,19 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using SwinGameSDK;
 
+/// <summary>
+/// This file controls how the game will load the available resources to the game 
+/// with the fonts, images, sounds, and music.
+/// </summary>
 public static class GameResources
 {
+
+    /// <summary>
+    /// Before we are able to use the resources, the program is expected to load
+    /// all of them into the game. It then returns to the caller.
+    /// </summary>
+
+
     private static void LoadFonts()
     {
         NewFont("ArialLarge", "arial.ttf", 80);
@@ -82,7 +93,7 @@ public static class GameResources
     ///     ''' <param name="image">Name of image</param>
     ///     ''' <returns>The image loaded with this name</returns>
 
-    public static Bitmap GameImage(string image)
+    public static Bitmap  GameImage(string image)
     {
         return _Images[image];
     }
@@ -206,7 +217,7 @@ public static class GameResources
         const int BG_Y = 453;
 
         int fullW;
-        Rectangle toDraw;
+        Rectangle toDraw = default(Rectangle);
 
         fullW = 260 * number / STEPS;
         SwinGame.DrawBitmap(_LoaderEmpty, BG_X, BG_Y);
@@ -217,7 +228,7 @@ public static class GameResources
         toDraw.Y = TY;
         toDraw.Width = TW;
         toDraw.Height = TH;
-        SwinGame.DrawTextLines(message, Color.White, Color.Transparent, _LoadingFont, FontAlignment.AlignCenter, toDraw);
+        SwinGame.DrawText(message, Color.White, Color.Transparent, _LoadingFont, FontAlignment.AlignCenter, toDraw);
         // SwinGame.DrawTextLines(message, Color.White, Color.Transparent, _LoadingFont, FontAlignment.AlignCenter, TX, TY, TW, TH)
 
         SwinGame.RefreshScreen();
@@ -235,7 +246,7 @@ public static class GameResources
         SwinGame.FreeBitmap(_Animation);
         SwinGame.FreeBitmap(_LoaderEmpty);
         SwinGame.FreeBitmap(_LoaderFull);
-        Audio.FreeSoundEffect(_StartSound);
+        //Audio.FreeSoundEffect(_StartSound);
         SwinGame.ChangeScreenSize(width, height);
     }
 
@@ -271,29 +282,25 @@ public static class GameResources
 
     private static void FreeFonts()
     {
-        Font obj;
-        foreach (var obj in _Fonts.Values)
+        foreach (Font obj in _Fonts.Values)
             SwinGame.FreeFont(obj);
     }
 
     private static void FreeImages()
     {
-        Bitmap obj;
-        foreach (var obj in _Images.Values)
+        foreach (Bitmap obj in _Images.Values)
             SwinGame.FreeBitmap(obj);
     }
 
     private static void FreeSounds()
     {
-        SoundEffect obj;
-        foreach (var obj in _Sounds.Values)
-            Audio.FreeSoundEffect(obj);
+        //foreach (SoundEffect obj in _Sounds.Values)
+            //Audio.FreeSoundEffect(obj);
     }
 
     private static void FreeMusic()
     {
-        Music obj;
-        foreach (var obj in _Music.Values)
+        foreach (Music obj in _Music.Values)
             Audio.FreeMusic(obj);
     }
 

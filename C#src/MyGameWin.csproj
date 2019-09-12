@@ -36,9 +36,152 @@
   <PropertyGroup>
     <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
   </PropertyGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Compile Include="src\GameMain.cs" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\MyGameMac.exe" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\animations\startup.txt" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\bundles\FileDialog.txt" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\bundles\splash.txt" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\fdFile.png" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\fdFolder.png" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\FileDialog_Active.png" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\FileDialog_Background.png" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\FileDialog_Inactive.png" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\FileDialog_Scroll.png" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\FileDialog_ScrollSmall.png" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\Swinburne.jpg" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\images\SwinGameAni.png" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\panels\FileDialog.txt" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\sounds\error.wav" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\sounds\SwinGameStart.wav" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\SwinGame.ico" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\SwinGame.dll" />
+    <Content Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\SwinGame.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug-Mac\MyGameMac.exe" />
+    <Content Include="bin\Debug-Mac\MyGameMac.exe.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug-Mac\Resources\animations\startup.txt" />
+    <Content Include="bin\Debug-Mac\Resources\bundles\FileDialog.txt" />
+    <Content Include="bin\Debug-Mac\Resources\bundles\splash.txt" />
+    <Content Include="bin\Debug-Mac\Resources\images\fdFile.png" />
+    <Content Include="bin\Debug-Mac\Resources\images\fdFolder.png" />
+    <Content Include="bin\Debug-Mac\Resources\images\FileDialog_Active.png" />
+    <Content Include="bin\Debug-Mac\Resources\images\FileDialog_Background.png" />
+    <Content Include="bin\Debug-Mac\Resources\images\FileDialog_Inactive.png" />
+    <Content Include="bin\Debug-Mac\Resources\images\FileDialog_Scroll.png" />
+    <Content Include="bin\Debug-Mac\Resources\images\FileDialog_ScrollSmall.png" />
+    <Content Include="bin\Debug-Mac\Resources\images\Swinburne.jpg" />
+    <Content Include="bin\Debug-Mac\Resources\images\SwinGameAni.png" />
+    <Content Include="bin\Debug-Mac\Resources\panels\FileDialog.txt" />
+    <Content Include="bin\Debug-Mac\Resources\sounds\error.wav" />
+    <Content Include="bin\Debug-Mac\Resources\sounds\SwinGameStart.wav" />
+    <Content Include="bin\Debug-Mac\Resources\SwinGame.ico" />
+    <Content Include="bin\Debug-Mac\SwinGame.dll" />
+    <Content Include="bin\Debug-Mac\SwinGame.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\libcurl.dll" />
+    <Content Include="bin\Debug\libeay32.dll" />
+    <Content Include="bin\Debug\libFLAC-8.dll" />
+    <Content Include="bin\Debug\libfreetype-6.dll" />
+    <Content Include="bin\Debug\libidn-11.dll" />
+    <Content Include="bin\Debug\libjpeg-9.dll" />
+    <Content Include="bin\Debug\libmodplug-1.dll" />
+    <Content Include="bin\Debug\libogg-0.dll" />
+    <Content Include="bin\Debug\libpng16-16.dll" />
+    <Content Include="bin\Debug\librtmp.dll" />
+    <Content Include="bin\Debug\libSGSDL2.dll" />
+    <Content Include="bin\Debug\libssh2.dll" />
+    <Content Include="bin\Debug\libtiff-5.dll" />
+    <Content Include="bin\Debug\libvorbis-0.dll" />
+    <Content Include="bin\Debug\libvorbisfile-3.dll" />
+    <Content Include="bin\Debug\libwebp-4.dll" />
+    <Content Include="bin\Debug\MyGame.exe" />
+    <Content Include="bin\Debug\MyGame.pdb" />
+    <Content Include="bin\Debug\MyGame.vshost.exe" />
+    <Content Include="bin\Debug\Resources\animations\startup.txt" />
+    <Content Include="bin\Debug\Resources\bundles\FileDialog.txt" />
+    <Content Include="bin\Debug\Resources\bundles\splash.txt" />
+    <Content Include="bin\Debug\Resources\images\fdFile.png" />
+    <Content Include="bin\Debug\Resources\images\fdFolder.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_Active.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_Background.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_Inactive.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_Scroll.png" />
+    <Content Include="bin\Debug\Resources\images\FileDialog_ScrollSmall.png" />
+    <Content Include="bin\Debug\Resources\images\Swinburne.jpg" />
+    <Content Include="bin\Debug\Resources\images\SwinGameAni.png" />
+    <Content Include="bin\Debug\Resources\panels\FileDialog.txt" />
+    <Content Include="bin\Debug\Resources\sounds\error.wav" />
+    <Content Include="bin\Debug\Resources\sounds\SwinGameStart.wav" />
+    <Content Include="bin\Debug\Resources\SwinGame.ico" />
+    <Content Include="bin\Debug\SGSDK.dll" />
+    <Content Include="bin\Debug\smpeg2.dll" />
+    <Content Include="bin\Debug\ssleay32.dll" />
+    <Content Include="bin\Debug\SwinGame.dll" />
+    <Content Include="bin\Debug\zlib1.dll" />
+    <Content Include="Resources\animations\splash.txt" />
+    <Content Include="Resources\images\deploy.jpg" />
+    <Content Include="Resources\images\deploy_button_hl.png" />
+    <Content Include="Resources\images\deploy_dir_button_horiz.png" />
+    <Content Include="Resources\images\deploy_dir_button_vert.png" />
+    <Content Include="Resources\images\deploy_play_button.png" />
+    <Content Include="Resources\images\deploy_randomize_button.png" />
+    <Content Include="Resources\images\discover.jpg" />
+    <Content Include="Resources\images\explosion.png" />
+    <Content Include="Resources\images\loader_empty.png" />
+    <Content Include="Resources\images\loader_full.png" />
+    <Content Include="Resources\images\main_page.jpg" />
+    <Content Include="Resources\images\ship_deploy_horiz_1.png" />
+    <Content Include="Resources\images\ship_deploy_horiz_2.png" />
+    <Content Include="Resources\images\ship_deploy_horiz_3.png" />
+    <Content Include="Resources\images\ship_deploy_horiz_4.png" />
+    <Content Include="Resources\images\ship_deploy_horiz_5.png" />
+    <Content Include="Resources\images\ship_deploy_vert_1.png" />
+    <Content Include="Resources\images\ship_deploy_vert_2.png" />
+    <Content Include="Resources\images\ship_deploy_vert_3.png" />
+    <Content Include="Resources\images\ship_deploy_vert_4.png" />
+    <Content Include="Resources\images\ship_deploy_vert_5.png" />
+    <Content Include="Resources\images\splash.png" />
+    <Content Include="Resources\images\SplashBack.png" />
+    <Content Include="Resources\images\SwinGameAni.jpg" />
+    <Content Include="Resources\sounds\hit.wav" />
+    <Content Include="Resources\sounds\horrordrone.mp3" />
+    <Content Include="Resources\sounds\lose.wav" />
+    <Content Include="Resources\sounds\sink.wav" />
+    <Content Include="Resources\sounds\SwinGameStart.ogg" />
+    <Content Include="Resources\sounds\watershot.wav" />
+    <Content Include="Resources\sounds\winner.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\AIHardPlayer.cs" />
+    <Compile Include="src\AIMediumPlayer.cs" />
+    <Compile Include="src\AIOption.cs" />
+    <Compile Include="src\AIPlayer.cs" />
+    <Compile Include="src\AttackResult.cs" />
+    <Compile Include="src\BattleShipsGame.cs" />
+    <Compile Include="src\DeploymentController.cs" />
+    <Compile Include="src\Direction.cs" />
+    <Compile Include="src\DiscoveryController.cs" />
+    <Compile Include="src\EndingGameController.cs" />
+    <Compile Include="src\GameController.cs" />
+    <Compile Include="src\GameLogic.cs" />
+    <Compile Include="src\GameResources.cs" />
+    <Compile Include="src\GameState.cs" />
+    <Compile Include="src\HighScoreController.cs" />
+    <Compile Include="src\ISeaGrid.cs" />
+    <Compile Include="src\MenuController.cs" />
+    <Compile Include="src\Player.cs" />
+    <Compile Include="src\ResultOfAttack.cs" />
+    <Compile Include="src\SeaGrid.cs" />
+    <Compile Include="src\SeaGridAdapter.cs" />
+    <Compile Include="src\Ship.cs" />
+    <Compile Include="src\ShipName.cs" />
+    <Compile Include="src\Tile.cs" />
+    <Compile Include="src\TileView.cs" />
+    <Compile Include="src\UtilityFunctions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -48,9 +191,192 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Resources\**\*.*">
+    <None Include="bin\Debug-Mac\.DS_Store" />
+    <None Include="bin\Debug-Mac\Info.plist" />
+    <None Include="bin\Debug-Mac\MyGameMac.app\Contents\Info.plist" />
+    <None Include="bin\Debug-Mac\MyGameMac.app\Contents\MacOS\MyGameMac" />
+    <None Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Info.plist" />
+    <None Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\libSGSDK.dylib" />
+    <None Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\fonts\arial.ttf" />
+    <None Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\fonts\cour.ttf" />
+    <None Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\fonts\maven_pro_regular.ttf" />
+    <None Include="bin\Debug-Mac\MyGameMac.app\Contents\MonoBundle\Resources\SwinGame.icns" />
+    <None Include="bin\Debug-Mac\Resources\fonts\arial.ttf" />
+    <None Include="bin\Debug-Mac\Resources\fonts\cour.ttf" />
+    <None Include="bin\Debug-Mac\Resources\fonts\maven_pro_regular.ttf" />
+    <None Include="bin\Debug-Mac\Resources\SwinGame.icns" />
+    <None Include="bin\Debug-Mac\stderr.log" />
+    <None Include="bin\Debug-Mac\stdout.log" />
+    <None Include="bin\Debug\MyGame.exe.config" />
+    <None Include="bin\Debug\MyGame.vshost.exe.config" />
+    <None Include="bin\Debug\MyGame.vshost.exe.manifest" />
+    <None Include="bin\Debug\Resources\fonts\arial.ttf" />
+    <None Include="bin\Debug\Resources\fonts\cour.ttf" />
+    <None Include="bin\Debug\Resources\fonts\maven_pro_regular.ttf" />
+    <None Include="bin\Debug\Resources\SwinGame.icns" />
+    <None Include="Resources\animations\splash.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Resources\animations\startup.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\bundles\FileDialog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\bundles\splash.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\fonts\arial.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\fonts\cour.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\fonts\ffaccess.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\fonts\maven_pro_regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\deploy.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\deploy_button_hl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\deploy_dir_button_horiz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\deploy_dir_button_vert.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\deploy_play_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\deploy_randomize_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\discover.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\explosion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\fdFile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\fdFolder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\FileDialog_Active.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\FileDialog_Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\FileDialog_Inactive.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\FileDialog_Scroll.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\FileDialog_ScrollSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\loader_empty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\loader_full.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\main_page.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_horiz_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_horiz_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_horiz_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_horiz_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_horiz_5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_vert_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_vert_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_vert_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_vert_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\ship_deploy_vert_5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\splash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\SplashBack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\Swinburne.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\SwinGameAni.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\SwinGameAni.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\panels\FileDialog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\error.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\error.wav" />
+    <None Include="Resources\sounds\hit.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\horrordrone.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\lose.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\sink.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\SwinGameStart.ogg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\SwinGameStart.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\SwinGameStart.wav" />
+    <None Include="Resources\sounds\watershot.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\winner.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\SwinGame.icns">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\SwinGame.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\fonts\ffaccess.ttf" />
+    <None Include="src\README.md" />
     <WinLibs Include="lib\win32\*.dll" />
   </ItemGroup>
   <Target Name="CopyLibsToOut">

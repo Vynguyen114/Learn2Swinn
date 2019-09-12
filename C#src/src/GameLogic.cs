@@ -1,26 +1,36 @@
+using SwinGameSDK;
+namespace MyGame
+{
 static class GameLogic
 {
+    /// <summary>
+    /// This file controls how the graphics window appears and disappears when the game 
+    /// is started up or closed down.
+    /// </summary>
     public static void Main()
     {
         // Opens a new Graphics Window
         SwinGame.OpenGraphicsWindow("Battle Ships", 800, 600);
 
         // Load Resources
-        LoadResources();
+        GameResources.LoadResources();
 
-        SwinGame.PlayMusic(GameMusic("Background"));
+        //Play the game's background music
+        SwinGame.PlayMusic("Background");
 
         // Game Loop
         do
         {
-            HandleUserInput();
-            DrawScreen();
+            GameController.HandleUserInput();
+            GameController.DrawScreen();
         }
-        while (!SwinGame.WindowCloseRequested() == true | CurrentState == GameState.Quitting);
+        while (!SwinGame.WindowCloseRequested() == true | GameController.CurrentState == GameState.Quitting);
 
+        //Stop the background music when the window is closed
         SwinGame.StopMusic();
 
         // Free Resources and Close Audio, to end the program.
-        FreeResources();
+        GameResources.FreeResources();
     }
+}
 }

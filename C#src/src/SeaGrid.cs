@@ -18,14 +18,13 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.CompilerServices;
 
 public class SeaGrid : ISeaGrid
 {
     private const int _WIDTH = 10;
     private const int _HEIGHT = 10;
 
-    private Tile[,] _GameTiles = new Tile[Width - 1 + 1, Height - 1 + 1];
+    private Tile[,] _GameTiles = new Tile[_WIDTH - 1 + 1, _HEIGHT - 1 + 1];
     private Dictionary<ShipName, Ship> _Ships;
     private int _ShipsKilled = 0;
 
@@ -77,7 +76,7 @@ public class SeaGrid : ISeaGrid
     /// <param name="x">x coordinate of the tile</param>
     /// <param name="y">y coordiante of the tile</param>
     /// <returns></returns>
-    public TileView get_Item(int x, int y)
+    public TileView Item(int x, int y)
     {
         return _GameTiles[x, y].View;
     }
@@ -126,7 +125,7 @@ public class SeaGrid : ISeaGrid
     /// <param name="direction">the direction the ship is going</param>
     public void MoveShip(int row, int col, ShipName ship, Direction direction)
     {
-        Ship newShip = _Ships(ship);
+        Ship newShip = _Ships[ship];
         newShip.Remove();
         AddShip(row, col, direction, newShip);
     }
@@ -147,7 +146,7 @@ public class SeaGrid : ISeaGrid
             int currentCol = col;
             int dRow = default(int), dCol = default(int);
 
-            if (direction == direction.LeftRight)
+            if (direction == Direction.LeftRight)
             {
                 dRow = 0;
                 dCol = 1;
@@ -199,7 +198,7 @@ public class SeaGrid : ISeaGrid
         {
             // tile is already hit
             if (_GameTiles[row, col].Shot)
-                return new AttackResult(ResultOfAttack.ShotAlready, "have already attacked [" + Conversions.ToString(col) + "," + Conversions.ToString(row) + "]!", row, col);
+                return new AttackResult(ResultOfAttack.ShotAlready, "have already attacked [" + (col.ToString()) + "," + (row.ToString()) + "]!", row, col);
 
             _GameTiles[row, col].Shoot();
 

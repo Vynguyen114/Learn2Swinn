@@ -107,7 +107,7 @@ public class Ship
         _tiles = new List<Tile>();
 
         // gets the ship size from the enumarator
-        _sizeOfShip = _shipName;
+        _sizeOfShip = Convert.ToInt32(_shipName);
     }
 
     /// <summary>
