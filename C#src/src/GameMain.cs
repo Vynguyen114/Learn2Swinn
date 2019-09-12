@@ -12,20 +12,35 @@ namespace MyGame
             //Open the game window
             OpenGraphicsWindow("GameMain", 800, 600);
             ShowSwinGameSplashScreen();
-            
+
+            // Load Resources
+            GameResources.LoadResources();
+
+            //Play the game's background music
+            SwinGame.PlayMusic("Background");
             //Run the game loop
-            while(false == WindowCloseRequested())
+            while (false == WindowCloseRequested())
             {
-                //Fetch the next batch of UI interaction
-                ProcessEvents();
-                
                 //Clear the screen and draw the framerate
                 ClearScreen(Color.White);
                 DrawFramerate(0,0);
-                
+               
+
+                GameController.HandleUserInput();
+                GameController.DrawScreen();
+
+                //Fetch the next batch of UI interaction
+                ProcessEvents();
+
                 //Draw onto the screen
                 RefreshScreen(60);
             }
+
+            //Stop the background music when the window is closed
+            SwinGame.StopMusic();
+
+            // Free Resources and Close Audio, to end the program.
+            GameResources.FreeResources();
         }
     }
 }
