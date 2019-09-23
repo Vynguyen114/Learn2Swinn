@@ -135,7 +135,7 @@ static class MenuController
     public static void DrawMainMenu()
     {
         // Clears the Screen to Black
-        SwinGame.DrawText("Main Menu", Color.Black, GameFont("ArialLarge"), 50, 50);
+        // SwinGame.DrawText("Main Menu", Color.White, GameFont("ArialLarge"), 50, 50)
 
         DrawButtons(MAIN_MENU);
     }
@@ -146,7 +146,8 @@ static class MenuController
     public static void DrawGameMenu()
     {
         // Clears the Screen to Black
-         SwinGame.DrawText("Paused", Color.Black, GameFont("ArialLarge"), 50, 50);
+        // SwinGame.DrawText("Paused", Color.White, GameFont("ArialLarge"), 50, 50)
+
         DrawButtons(GAME_MENU);
     }
 
@@ -159,7 +160,7 @@ static class MenuController
     public static void DrawSettings()
     {
         // Clears the Screen to Black
-        SwinGame.DrawText("Settings", Color.Black, GameFont("ArialLarge"), 50, 50);
+        // SwinGame.DrawText("Settings", Color.White, GameFont("ArialLarge"), 50, 50)
 
         DrawButtons(MAIN_MENU);
         DrawButtons(SETUP_MENU, 1, 1);
@@ -197,7 +198,7 @@ static class MenuController
             int btnLeft;
 
             btnLeft = MENU_LEFT + BUTTON_SEP * (i + xOffset);
-            SwinGame.FillRectangle(Color.White, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
+            // SwinGame.FillRectangle(Color.White, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT)
             toDraw.X = btnLeft + TEXT_OFFSET;
             toDraw.Y = btnTop + TEXT_OFFSET;
             toDraw.Width = BUTTON_WIDTH;
