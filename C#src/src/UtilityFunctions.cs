@@ -170,7 +170,6 @@ static class UtilityFunctions
                         }
 
                     case  TileView.Sea:
-                    case  TileView.Ship:
                         {
                             if (small)
                                 fillColor = SMALL_SEA;

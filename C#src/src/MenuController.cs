@@ -18,7 +18,7 @@ using SwinGameSDK;
 
 /// ''' from the menus in the game. These include the main menu, game
 
-/// ''' menu and the settings m,enu.
+/// ''' menu and the settings menu.
 
 /// ''' </summary>
 
@@ -135,7 +135,7 @@ static class MenuController
     public static void DrawMainMenu()
     {
         // Clears the Screen to Black
-        SwinGame.DrawText("Main Menu", Color.Black, GameFont("ArialLarge"), 50, 50);
+        SwinGame.DrawText("Main Menu", Color.Black, GameResources.GameFont("ArialLarge"), 50, 50);
 
         DrawButtons(MAIN_MENU);
     }
@@ -146,7 +146,7 @@ static class MenuController
     public static void DrawGameMenu()
     {
         // Clears the Screen to Black
-         SwinGame.DrawText("Paused", Color.Black, GameFont("ArialLarge"), 50, 50);
+         SwinGame.DrawText("Paused", Color.Black, GameResources.GameFont("ArialLarge"), 50, 50);
         DrawButtons(GAME_MENU);
     }
 
@@ -159,7 +159,7 @@ static class MenuController
     public static void DrawSettings()
     {
         // Clears the Screen to Black
-        SwinGame.DrawText("Settings", Color.Black, GameFont("ArialLarge"), 50, 50);
+        SwinGame.DrawText("Settings", Color.Black, GameResources.GameFont("ArialLarge"), 50, 50);
 
         DrawButtons(MAIN_MENU);
         DrawButtons(SETUP_MENU, 1, 1);
