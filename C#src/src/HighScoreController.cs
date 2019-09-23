@@ -18,7 +18,7 @@ static class HighScoreController
 {
     private const  int NAME_WIDTH = 3;
     private const  int SCORES_LEFT = 490;
-
+    private const int SCORES_TOP = 80;
     /// <summary>
     ///     ''' The score structure is used to keep the name and
     ///     ''' score of the top players together.
@@ -67,7 +67,7 @@ static class HighScoreController
         input = new StreamReader(filename);
 
         // Read in the # of scores
-        int numScores;
+        int numScores=0;
         numScores = Convert.ToInt32(input.ReadLine());
 
         _Scores.Clear();
@@ -77,7 +77,7 @@ static class HighScoreController
         for (i = 1; i <= numScores; i++)
         {
             Score s=new Score();
-            string line;
+            string line=null;
 
             line = input.ReadLine();
 
