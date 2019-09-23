@@ -118,7 +118,7 @@ public static class GameController
 
         _human = new Player(_theGame);
 
-        // AddHandler _human.PlayerGrid.Changed, AddressOf GridChanged
+        _human.PlayerGrid.Changed+=GridChanged;
         _ai.PlayerGrid.Changed += GridChanged;
         _theGame.AttackCompleted += AttackCompleted;
 
@@ -131,7 +131,7 @@ public static class GameController
 
     private static void EndGame()
     {
-        // RemoveHandler _human.PlayerGrid.Changed, AddressOf GridChanged
+        _human.PlayerGrid.Changed -= GridChanged;
         _ai.PlayerGrid.Changed -= GridChanged;
         _theGame.AttackCompleted -= AttackCompleted;
     }
@@ -175,7 +175,7 @@ public static class GameController
     ///     ''' <param name="result">the result of the attack</param>
     ///     ''' <remarks>
     ///     ''' Displays a message, plays sound and redraws the screen
-    ///     ''' </remarks>
+    ///     ''' </remarks>m
     private static void AttackCompleted(object sender, AttackResult result)
     {
         bool isHuman;
