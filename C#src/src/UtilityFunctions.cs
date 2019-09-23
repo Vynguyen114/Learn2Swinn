@@ -83,7 +83,7 @@ static class UtilityFunctions
     ///     ''' <param name="showShips">indicates if the ships should be shown</param>
     public static void DrawField(ISeaGrid grid, Player thePlayer, bool showShips)
     {
-        DrawCustomField(grid, thePlayer, false, showShips, FIELD_LEFT, FIELD_TOP, FIELD_WIDTH, FIELD_HEIGHT, CELL_WIDTH, CELL_HEIGHT, CELL_GAP);
+       // DrawCustomField(grid, thePlayer, false, showShips, FIELD_LEFT, FIELD_TOP, FIELD_WIDTH, FIELD_HEIGHT, CELL_WIDTH, CELL_HEIGHT, CELL_GAP);
     }
 
     /// <summary>
@@ -146,11 +146,6 @@ static class UtilityFunctions
                             draw = false;
                             break;
                         }
-                        if (small)
-                            fillColor=SMALL_SHIP;
-                        else
-                            fillColor = LARGE_SHIP;
-                
                     case  TileView.Miss:
                         {
                             if (small)

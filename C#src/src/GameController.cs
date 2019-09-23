@@ -118,7 +118,7 @@ public static class GameController
 
         _human = new Player(_theGame);
 
-        _human.PlayerGrid.Changed+=GridChanged;
+        //_human.PlayerGrid.Changed+=GridChanged;
         _ai.PlayerGrid.Changed += GridChanged;
         _theGame.AttackCompleted += AttackCompleted;
 
@@ -131,7 +131,7 @@ public static class GameController
 
     private static void EndGame()
     {
-        _human.PlayerGrid.Changed -= GridChanged;
+       //_human.PlayerGrid.Changed -= GridChanged;
         _ai.PlayerGrid.Changed -= GridChanged;
         _theGame.AttackCompleted -= AttackCompleted;
     }
