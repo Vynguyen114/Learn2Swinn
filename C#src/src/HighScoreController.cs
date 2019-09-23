@@ -76,7 +76,7 @@ static class HighScoreController
 
         for (i = 1; i <= numScores; i++)
         {
-            Score s;
+            Score s=new Score();
             string line;
 
             line = input.ReadLine();
@@ -98,7 +98,7 @@ static class HighScoreController
     ///     ''' 
     ///     ''' Where NNN is the name and SSS is the score
     ///     ''' </remarks>
-    private static void SaveScores()
+    public static void SaveScores()
     {
         string filename;
         filename = SwinGame.PathToResource("highscores.txt");

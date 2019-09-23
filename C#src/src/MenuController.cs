@@ -294,6 +294,7 @@ static class MenuController
             case MAIN_MENU_QUIT_BUTTON:
                 {
                     GameController.EndCurrentState();
+                    HighScoreController.SaveScores();
                     break;
                 }
         }
