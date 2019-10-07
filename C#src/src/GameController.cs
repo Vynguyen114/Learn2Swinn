@@ -37,6 +37,13 @@ public static class GameController
     ///     ''' </summary>
     ///     ''' <value>The current state</value>
     ///     ''' <returns>The current state</returns>
+    public static BattleShipsGame theGame
+    {
+        get
+        {
+            return _theGame;
+        }
+    }
     public static GameState CurrentState
     {
         get
@@ -79,7 +86,15 @@ public static class GameController
         // at the start the player is viewing the main menu
         _state.Push(GameState.ViewingMainMenu);
     }
+    public static void PushStatesInStack()
+    {
 
+        //bottom state will be quitting. If player exits main menu then the game is over
+        _state.Push(GameState.Quitting);
+
+        //at the start the player is viewing the main menu
+        _state.Push(GameState.ViewingMainMenu);
+    }
     /// <summary>
     ///     ''' Starts a new game.
     ///     ''' </summary>
@@ -90,43 +105,35 @@ public static class GameController
     {
         if (_theGame != null)
             EndGame();
-
-        // Create the game
+        //Create the game
         _theGame = new BattleShipsGame();
+        //create the players
+        CreateComputerPlayer();
+        _human = new Player(_theGame);
+        //AddHandler _human.PlayerGrid.Changed, AddressOf GridChanged
+        _ai.PlayerGrid.Changed += GridChanged;
+        _theGame.AttackCompleted += AttackCompleted;
+        AddNewState(GameState.Deploying);
+    }
 
-        // create the players
+    public static void CreateComputerPlayer()
+    {
+
         switch (_aiSetting)
         {
             case AIOption.Easy:
-                {
-                    _ai = new AIEasyPlayer(_theGame);
-                    break;
-                }
-
-            case  AIOption.Medium:
-                {
-                    _ai = new AIMediumPlayer(_theGame);
-                    break;
-                }
-
-            case  AIOption.Hard:
-                {
-                    _ai = new AIHardPlayer(_theGame);
-                    break;
-                }           
-
+                _ai = new AIEasyPlayer(_theGame);
+                break;
+            case AIOption.Medium:
+                _ai = new AIMediumPlayer(_theGame);
+                break;
+            case AIOption.Hard:
+                _ai = new AIHardPlayer(_theGame);
+                break;
             default:
-                    _ai = new AIEasyPlayer(_theGame);
-                    break;
+                _ai = new AIMediumPlayer(_theGame);
+                break;
         }
-
-        _human = new Player(_theGame);
-
-        // AddHandler _human.PlayerGrid.Changed, AddressOf GridChanged
-        _ai.PlayerGrid.Changed += GridChanged;
-        _theGame.AttackCompleted += AttackCompleted;
-
-        AddNewState(GameState.Deploying);
     }
 
     /// <summary>
@@ -253,7 +260,10 @@ public static class GameController
 
         SwitchState(GameState.Discovering);
     }
-
+    internal static AIOption getDifficutly()
+    {
+        throw new NotImplementedException();
+    }
     /// <summary>
     ///     ''' Gets the player to attack the indicated row and column.
     ///     ''' </summary>
