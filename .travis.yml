@@ -3,6 +3,3 @@ solution:
 mono: latest
 solution: C#src/MyGameWin.sln
 dotnet: 2.1.202
-script:
-- dotnet restore
-- dotnet test
