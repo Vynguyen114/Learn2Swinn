@@ -1,0 +1,6 @@
+language: csharp
+solution: 
+mono: latest
+solution: C#src/MyGameWin.sln
+script:
+- dotnet restore
